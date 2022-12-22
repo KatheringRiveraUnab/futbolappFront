@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import {CompSignUpUser} from './Components/SignUpUsers.jsx';
+import { CompNavMenu } from './Components/NavBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SvgComponent from './Components/logo.jsx';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header >
+        <SvgComponent className="App-logo"/>
       </header>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<CompNavMenu />}>
+              <Route path='/SignUp' element={<CompSignUpUser />} />
+            </Route>
+        </Routes>
+      </BrowserRouter>
+      
+      
     </div>
+    
   );
 }
 
