@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 //aca inicia
 export const Login = () => {
@@ -42,8 +42,8 @@ export const Login = () => {
         let r = union1.substring(1, union1.length-3);
             console.log('Este es el JWT:',r);
             localStorage.setItem('auth',r);
-            navigate('/')
-            window.location = '/'
+            navigate('/shusers')
+            window.location = '/shusers'
         }
         catch(error) {
             navigate('/SignIn')
@@ -55,31 +55,28 @@ export const Login = () => {
  
 //************* */
     return (
-        <div className="login-form">
+        <div className=" ">
             <Card className='card1'>
                 <Card.Body>
                     <div className='titulo'>
                         <h1>Inicio de Sesión</h1>
                     </div>
                     <Form >
-                        <Form.Group>
-                            <Form.Control className='mb-3'
-                                type= "email"
-                                placeholder = "Correo"
-                                value= {body.email}
-                                onChange={inputChange}
-                                name= "correo"
-                            />
-                        </Form.Group>
-                        <Form.Group>
-                            <Form.Control className='mb-3'
-                                type="password"
-                                placeholder = "Password"
-                                value={body.password}
-                                onChange={inputChange}
-                                name="password"
-                            />
-                        </Form.Group>
+                        
+                        <Form.Control
+                            type= "email"
+                            placeholder = "Correo"
+                            value= {body.email}
+                            onChange= { inputChange }
+                            name= "email"
+                        />
+                        <Form.Control
+                            type="password"
+                            placeholder = "Password"
+                            value={body.password}
+                            onChange={ inputChange }
+                            name="password"
+                        />
                         <Button onClick={onSubmit} type='submit' >
                             Login
                         </Button>

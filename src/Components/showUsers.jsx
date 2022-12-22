@@ -27,9 +27,7 @@ export const CompShowUsers = () => {
     const [users, setBlog] = useState([])
     useEffect( ()=>{
         ObtenerUsuarios()
-    },
-    // eslint-disable-next-line
-    [])
+    })
 
     //procedimineto para mostrar todos los registros
     const ObtenerUsuarios = async () => {
