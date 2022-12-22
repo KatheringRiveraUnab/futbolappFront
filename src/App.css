@@ -14,7 +14,7 @@
 .App-logo{
   background-color: rgb(12, 14, 43);
 }
-.App .card-body{
+.App .card1 .card-body{
   width: 100%;
   padding: 50px;
   z-index: 1;
@@ -30,7 +30,7 @@
 .login-form{
   background-color: whitesmoke;
 }
-.card{
+.card1{
   margin:0.1% 0.5%;
   background: whitesmoke;
   position: relative;
@@ -40,7 +40,7 @@
   overflow: hidden;
   border-radius: 20px;
 }
-.card:hover:before {
+.card1:hover:before {
   content: '';
   position: absolute;
   width: 150px;
@@ -58,7 +58,7 @@
   transform: rotate(360deg);
   }
 }
-.card::after {
+.card1::after {
   content: '';
   position: absolute;
   background: white;

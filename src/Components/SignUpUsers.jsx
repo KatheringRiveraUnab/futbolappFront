@@ -17,12 +17,12 @@ export const CompSignUpUser = () =>{
     var store = async (e) =>{
         e.preventDefault()
         await axios.post(URI,{name: name, email: email, password: password})
-        navigate('/')
+        navigate('/shusers')
     }
 
     return(
         <div className='login-form'>
-            <Card>
+            <Card className='card1'>
                 <Card.Body>
                     <div className='titulo'>
                         <h1>Registro</h1>

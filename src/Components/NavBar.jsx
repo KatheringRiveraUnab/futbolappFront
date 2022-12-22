@@ -16,7 +16,7 @@ export const CompNavMenu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-end flex-grow-1 pe-3">
-            <Nav.Link href="SignIn">Posiciones</Nav.Link>
+          <Nav.Link as={Link} to={'/shusers'}>Usuarios</Nav.Link>
             <Nav.Link href="SignIn">Calendario</Nav.Link>
             <Nav.Link as={Link} to={'/SignUp'}>Registrarse</Nav.Link>
             <Nav.Link href="SignIn"><FaUserLock /></Nav.Link>
